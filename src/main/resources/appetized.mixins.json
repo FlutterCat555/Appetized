@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.fluttercat.appetized.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ExampleMixin",
+    "PlaceableFoodItemsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+	}
+}
