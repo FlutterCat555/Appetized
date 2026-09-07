@@ -3,9 +3,10 @@
 	"id": "appetized",
 	"version": "${version}",
 	"name": "Appetized",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "placeholder",
 	"authors": [
-		"Me!"
+		"r0guer0s3 - designer, placeholder",
+		"fluttercat555 - placeholder"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",

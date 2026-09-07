@@ -14,7 +14,7 @@ import java.util.function.Function;
 
 public class ModItems {
 
-    public static final Item CLEAVER = registerItem("cleaver",properties -> new CleaverItem(properties.stacksTo(1).repairable(Items.IRON_INGOT)));
+    public static final Item CLEAVER = registerItem("cleaver",properties -> new CleaverItem(properties.stacksTo(1).repairable(Items.IRON_INGOT).durability(200)));
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();
