@@ -1,11 +1,16 @@
 package dev.fluttercat.appetized;
 
 import dev.fluttercat.appetized.block.ModBlocks;
+import dev.fluttercat.appetized.effect.ModMobEffects;
 import dev.fluttercat.appetized.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.resources.Identifier;
 
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,8 +24,21 @@ public class Appetized implements ModInitializer {
 
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModMobEffects.registerModEffects();
 
-		LOGGER.info("mxnjuisherdfgtefiswjfktgle4swlk3oi");
+		LOGGER.info("i burnt the water");
+
+
+		//ref: https://docs.fabricmc.net/develop/events#adding-items-to-the-loot-table
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            // Let's only modify built-in loot tables and leave data pack loot tables untouched by checking the source.
+            // We also check that the loot table ID is equal to the ID we want.
+            if (source.isBuiltin() && key.equals(BuiltInLootTables.SIMPLE_DUNGEON)) {
+                // We make the pool and add an item
+                LootPool.Builder poolBuilder = LootPool.lootPool().add(LootItem.lootTableItem(ModItems.TARNISHED_CLEAVER));
+                tableBuilder.withPool(poolBuilder);
+            }
+        });
 	}
 
 	public static Identifier id(String path) {

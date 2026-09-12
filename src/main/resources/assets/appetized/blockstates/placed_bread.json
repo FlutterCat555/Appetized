@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "bites=0": {
       "model": "appetized:block/bread"
+    },
+    "bites=1": {
+      "model": "appetized:block/eaten_bread_1"
+    },
+    "bites=2": {
+      "model": "appetized:block/eaten_bread_2"
+    },
+    "bites=3": {
+      "model": "appetized:block/eaten_bread_3"
     }
   }
 }

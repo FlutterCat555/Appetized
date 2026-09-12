@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:husbandry/plant_seed",
+  "criteria": {
+    "sliced_bread": {
+      "conditions": {
+        "items": [
+          {
+            "items": "appetized:sliced_bread"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.husbandry.sliced_bread.description"
+    },
+    "icon": {
+      "id": "appetized:sliced_bread"
+    },
+    "title": {
+      "translate": "advancements.husbandry.sliced_bread.title"
+    }
+  },
+  "requirements": [
+    [
+      "sliced_bread"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

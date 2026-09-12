@@ -21,6 +21,12 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.CLEAVER, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.TARNISHED_CLEAVER, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+//        itemModelGenerators.generateFlatItem(ModItems.SCYTHE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SLICED_BREAD, ModelTemplates.FLAT_ITEM);
+
+
 
     }
 }

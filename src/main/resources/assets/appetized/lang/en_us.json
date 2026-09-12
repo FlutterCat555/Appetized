@@ -1,3 +1,16 @@
 {
-  "item.appetized.cleaver": "Cleaver"
+
+  "item.appetized.tarnished_cleaver": "Tarnished Cleaver",
+  "item.appetized.cleaver": "Cleaver",
+  "item.appetized.scythe": "Scythe",
+
+  "item.appetized.sliced_bread": "Sliced Bread",
+
+  "effect.appetized.slashed": "Slashed",
+
+
+
+  "advancements.husbandry.sliced_bread.title": "The best thing since...",
+  "advancements.husbandry.sliced_bread.description": "Slice a loaf of bread with a cleaver"
+
 }

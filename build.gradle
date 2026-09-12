@@ -35,6 +35,8 @@ dependencies {
 	include "maven.modrinth:codAaoxh:3uBvRFE9" //jij it too
 	implementation "maven.modrinth:mOgUt4GM:njXb639R"//modmenu
 	implementation "maven.modrinth:6xkq8JXv:DkMhfymK"//combat amenities
+	implementation "maven.modrinth:6hN1V6wJ:ZfPu4jCS"//enchancement
+	implementation "maven.modrinth:9Ya7Yyre:taWe52SL"//strawberrylib
 }
 
 processResources {

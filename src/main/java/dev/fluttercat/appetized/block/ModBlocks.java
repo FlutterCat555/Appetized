@@ -17,7 +17,7 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.function.Function;
 
 public class ModBlocks {
-
+    
     public static final Block PLACED_BREAD = registerBlock("placed_bread", properties ->
             new PlacedBreadBlock(Items.BREAD, properties.forceSolidOn().strength(0.5F).sound(SoundType.WOOL).pushReaction(PushReaction.DESTROY)));
 

@@ -1,3 +1,7 @@
 // 26.2	-999999999-01-01T00:00:00	Appetized/Model Definitions
 89f4809234b4b594235e7ae7be8b835691551812 assets/appetized/items/cleaver.json
+e8e690176ac3ba332652252162e0539a06f72031 assets/appetized/items/sliced_bread.json
+15cde25419d07cde0b112614693e93534f41c341 assets/appetized/items/tarnished_cleaver.json
 dc91352ed423cb70ed2adeb644bd1eb8b927bce9 assets/appetized/models/item/cleaver.json
+1317a0edcb724ae21f6cf2ff3f9e516227b62d84 assets/appetized/models/item/sliced_bread.json
+65f59aad648a3313dc833e3a5b4f7c6c31bfc72b assets/appetized/models/item/tarnished_cleaver.json
