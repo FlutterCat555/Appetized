@@ -17,8 +17,10 @@ public class PlaceableFoodItemsMixin {
         if (context.getPlayer() == null) {
             return;
         }
-        else if (context.getPlayer().getItemInHand(context.getHand()).getItem().equals(Items.BREAD)) {
-            cir.setReturnValue(ModBlocks.PLACED_BREAD.asItem().useOn(context));
+        else if(context.getPlayer().isSecondaryUseActive()) {
+            if (context.getPlayer().getItemInHand(context.getHand()).getItem().equals(Items.BREAD)) {
+                cir.setReturnValue(ModBlocks.PLACED_BREAD.asItem().useOn(context));
+            }
         }
     }
 }

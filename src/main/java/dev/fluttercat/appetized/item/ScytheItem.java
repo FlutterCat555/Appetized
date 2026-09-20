@@ -6,14 +6,13 @@ import net.minecraft.core.Vec3i;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.phys.Vec3;
 import org.apache.logging.log4j.core.jmx.Server;
 
 public class ScytheItem extends Item {
@@ -45,5 +44,15 @@ public class ScytheItem extends Item {
         else{
             return Items.IRON_HOE.useOn(context); //hacky fix
         }
+    }
+
+    @Override
+    public void hurtEnemy(ItemStack itemStack, LivingEntity mob, LivingEntity attacker) {
+        super.hurtEnemy(itemStack, mob, attacker);
+        Vec3 vel = new Vec3(
+                (attacker.getX()-mob.getX())/4-mob.getDeltaMovement().x,
+                -attacker.getDeltaMovement().y/1.5,
+                (attacker.getZ()-mob.getZ())/4-mob.getDeltaMovement().z);
+        mob.push(vel.x, vel.y, vel.z);
     }
 }

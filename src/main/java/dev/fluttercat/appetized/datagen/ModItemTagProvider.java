@@ -20,6 +20,10 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     protected void addTags(HolderLookup.Provider registries) {
         tag(ItemTags.HOES).add(ModItems.getRK(ModItems.SCYTHE));
         tag(ItemTags.SWORDS).add(ModItems.getRK(ModItems.SCYTHE));
+
+        tag(ItemTags.HOES).add(ModItems.getRK(ModItems.TARNISHED_SCYTHE));
+        tag(ItemTags.SWORDS).add(ModItems.getRK(ModItems.TARNISHED_SCYTHE));
+
         tag(ItemTags.AXES).add(ModItems.getRK(ModItems.CLEAVER));
         tag(ItemTags.AXES).add(ModItems.getRK(ModItems.TARNISHED_CLEAVER));
 

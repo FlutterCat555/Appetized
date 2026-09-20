@@ -16,11 +16,22 @@ import java.util.function.Function;
 
 public class ModItems {
 
-    public static final Item CLEAVER = registerItem("cleaver",properties -> new CleaverItem(properties.stacksTo(1).repairable(Items.IRON_INGOT).durability(400).axe(ToolMaterial.IRON,3.5f,-2.25f)));
-//    public static final Item TARNISHED_CLEAVER_BLADE = registerItem("tarnished_cleaver_blade")
+
     public static final Item TARNISHED_CLEAVER = registerItem("tarnished_cleaver",properties -> new CleaverItem(properties.stacksTo(1).repairable(Items.IRON_INGOT).durability(200).axe(ToolMaterial.IRON,2.5f,-2.75f)));
 
-    public static final Item SCYTHE = registerItem("scythe",properties -> new ScytheItem(properties.durability(450).stacksTo(1).repairable(Items.IRON_INGOT).sword(ToolMaterial.IRON,5,-3f)));
+    public static final Item CLEAVER = registerItem("cleaver",properties -> new CleaverItem(properties.stacksTo(1).repairable(Items.IRON_INGOT).durability(400).axe(ToolMaterial.IRON,3.5f,-2.25f)));
+
+    public static final Item TARNISHED_SCYTHE = registerItem("tarnished_scythe",properties ->
+            new ScytheItem(properties.durability(250).stacksTo(1)
+                    .hoe(ToolMaterial.IRON,4,-3.1f)
+                    .repairable(Items.IRON_INGOT).attributes(ModItemAttributes.createTarnishedScytheAttributes())
+            ));
+
+    public static final Item SCYTHE = registerItem("scythe",properties ->
+            new ScytheItem(properties.durability(450).stacksTo(1)
+                    .hoe(ToolMaterial.DIAMOND,5,-2.9f)
+                    .repairable(Items.IRON_INGOT).attributes(ModItemAttributes.createScytheAttributes())
+            ));
 
     public static final Item SLICED_BREAD = registerItem("sliced_bread",properties -> new Item(properties.stacksTo(64).food(ModFoods.SLICED_BREAD,ModConsumables.SLICED_BREAD)));
 
@@ -38,9 +49,12 @@ public class ModItems {
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
             output.insertBefore(Items.TRIDENT,TARNISHED_CLEAVER);
-            output.insertAfter(TARNISHED_CLEAVER,CLEAVER);
+            output.insertAfter(TARNISHED_CLEAVER,TARNISHED_SCYTHE);
 
-            output.insertAfter(Items.MACE,SCYTHE);
+            output.insertAfter(TARNISHED_SCYTHE,CLEAVER);
+            output.insertAfter(CLEAVER,SCYTHE);
+
+
 
         });
 

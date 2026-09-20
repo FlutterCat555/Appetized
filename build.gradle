@@ -39,6 +39,10 @@ dependencies {
 	implementation "maven.modrinth:9Ya7Yyre:taWe52SL"//strawberrylib
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/appetized.accesswidener")
+}
+
 processResources {
 	def version = project.version
 	inputs.property "version", version
