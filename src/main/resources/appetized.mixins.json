@@ -3,6 +3,7 @@
   "package": "dev.fluttercat.appetized.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "ComposterBlockMixin",
     "ExampleMixin",
     "PlaceableFoodItemsMixin"
   ],

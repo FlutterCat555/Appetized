@@ -5,7 +5,7 @@
 	"name": "Appetized",
 	"description": "placeholder",
 	"authors": [
-		"r0guer0s3 - designer",
+		"r0guer0s3 - designer, lead artist",
 		"fluttercat555 - lead dev, artist"
 	],
 	"contact": {
@@ -18,6 +18,9 @@
 	"entrypoints": {
 		"main": [
           "dev.fluttercat.appetized.Appetized"
+		],
+		"client": [
+			"dev.fluttercat.appetized.AppetizedClient"
 		],
 		"fabric-datagen": [
 			"dev.fluttercat.appetized.AppetizedDataGenerator"
